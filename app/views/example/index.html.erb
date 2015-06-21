@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="blogApp">
+<head>
+   
+  
+    
+   
+</head>
+<h3 style="color:darkblue;text-align:center; text-decoration:wavy">Techno Blog</h3>
+<br />
+<body class="container" ng-controller="BlogController">
+    <div class="row" ng-repeat="blog in entries">
+        <div>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h3 class="col-xs-12 col-sm-6 col-md-10" style="color:black">{{blog.body.title}} <br />By: {{blog.body.name}}</h3>
+                            <br />
+                            <h4>{{blog.body.date | date }}</h4>
+                            <button class="btn btn-primary" ng-click="showDetails =!showDetails">Read More</button>
+                            <div class="show-description" ng-show="showDetails">
+                                <br />
+                                <p> {{blog.body.description}}</p>
+                                <img class="img-rounded" ng-src="{{blog.body.img}}" alt="grace hopper" width="150" height="100" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </body>
+</html>
