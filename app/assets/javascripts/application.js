@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= javascript_include_tag
 
-
+//= require bootstrap
 //= require angular
 //= require angular-rails-templates
 
